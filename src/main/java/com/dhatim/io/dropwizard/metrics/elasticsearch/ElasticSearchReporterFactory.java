@@ -19,7 +19,7 @@ public class ElasticSearchReporterFactory extends BaseReporterFactory {
         public String host = "localhost";
 
         @Range(min = 1, max = 49151)
-        public int port = 2900;
+        public int port = 9200;
 
         public Server() {
         }
