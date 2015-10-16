@@ -39,10 +39,26 @@ and you're good to go.
 
 ## configuration
 
-The configuration is quite limited right now:
+The configuration is somewhat limited right now:
 
-- host: the elasticsearch server hostname
-- port: the port elasticsearch listens on
+- servers: you can configure a set of elasticsearch nodes with the
+`servers` key, which hold a collection of `host` and `port` keys.
+- index: elastichsearch index name
+
+### default values
+
+```yaml
+metrics:
+  reporters:
+    - type: elasticsearch
+      servers:
+        - host: localhost
+          port: 9200
+      index: metrics
+```
+
+It should basically follow the [Metrics Elasticsearch Reporter][mer]
+defaults.
 
 [dw]: http://www.dropwizard.io
 [dwm]: http://metrics.dropwizard.io
