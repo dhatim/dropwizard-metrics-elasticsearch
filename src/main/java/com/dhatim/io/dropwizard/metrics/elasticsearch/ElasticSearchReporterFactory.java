@@ -32,6 +32,8 @@ public class ElasticSearchReporterFactory extends BaseReporterFactory {
 
     public Server[] servers = new Server[]{ new Server("localhost", 9200) };
 
+    public String index = "metrics";
+
     @Override
     public ScheduledReporter build(MetricRegistry registry) {
         try {
@@ -41,6 +43,7 @@ public class ElasticSearchReporterFactory extends BaseReporterFactory {
 
             return ElasticsearchReporter.forRegistry(registry)
                     .hosts(hosts)
+                    .index(index)
                     .build();
         } catch (IOException e) {
             throw new RuntimeException("can't build elasticsearch reporter", e);
