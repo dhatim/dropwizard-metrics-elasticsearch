@@ -4,7 +4,7 @@
 
     <groupId>com.dhatim.io.dropwizard</groupId>
     <artifactId>dropwizard-metrics-elasticsearch</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <name>Dropwizard Metrics Support for Elastic Search</name>
     <url>https://github.com/dhatim/dropwizard-metrics-elasticsearch</url>
@@ -23,7 +23,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:dhatim/dropwizard-metrics-elasticsearch.git</connection>
-        <tag>HEAD</tag>
+        <tag>v0.0.1</tag>
     </scm>
 
     <build>
