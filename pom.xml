@@ -59,7 +59,7 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-metrics</artifactId>
-            <version>0.9.0-rc4</version>
+            <version>0.9.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
