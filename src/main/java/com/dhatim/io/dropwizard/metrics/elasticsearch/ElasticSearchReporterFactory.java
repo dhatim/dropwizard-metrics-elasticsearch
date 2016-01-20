@@ -27,15 +27,15 @@ import org.hibernate.validator.constraints.Range;
 
 @JsonTypeName("elasticsearch")
 public class ElasticSearchReporterFactory extends BaseReporterFactory {
-
+    
     public static class Server {
-
+        
         @NotEmpty
         public String host = "localhost";
-
+        
         @Range(min = 1, max = 49151)
         public int port = 9200;
-
+        
         public Server() {
         }
         
@@ -44,21 +44,27 @@ public class ElasticSearchReporterFactory extends BaseReporterFactory {
             this.port = port;
         }
     }
-
-    public Server[] servers = new Server[]{ new Server("localhost", 9200) };
-
+    
+    public Server[] servers = new Server[]{new Server("localhost", 9200)};
+    
+    public String prefix = "";
+    
     public String index = "metrics";
-
+    
+    public String indexDateFormat = "yyyy.MM.dd";
+    
     @Override
     public ScheduledReporter build(MetricRegistry registry) {
         try {
             String[] hosts = Arrays.stream(servers)
                     .map(s -> s.host + ":" + s.port)
                     .toArray(String[]::new);
-
+            
             return ElasticsearchReporter.forRegistry(registry)
                     .hosts(hosts)
+                    .prefixedWith(prefix)
                     .index(index)
+                    .indexDateFormat(indexDateFormat)
                     .build();
         } catch (IOException e) {
             throw new RuntimeException("can't build elasticsearch reporter", e);

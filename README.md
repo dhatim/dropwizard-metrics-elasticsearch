@@ -21,7 +21,7 @@ fact, under the hood it actually makes use of
     <dependency>
         <groupId>com.dhatim.io.dropwizard</groupId>
         <artifactId>dropwizard-metrics-elasticsearch</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
     ../..
 </dependencies>
@@ -43,7 +43,9 @@ The configuration is somewhat limited right now:
 
 - servers: you can configure a set of elasticsearch nodes with the
 `servers` key, which hold a collection of `host` and `port` keys.
-- index: elasticsearch index name
+- prefix: useful to identify single hosts.
+- index: elasticsearch index name.
+- indexDateFormat: elasticsearch index date format.
 
 ### default values
 
@@ -54,7 +56,9 @@ metrics:
       servers:
         - host: localhost
           port: 9200
+      prefix:
       index: metrics
+      indexDateFormat: yyyy.MM.dd
 ```
 
 It should basically follow the [Metrics Elasticsearch Reporter][mer]
