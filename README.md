@@ -1,6 +1,6 @@
 # Dropwizard Metrics Support for Elastic Search
 
-THis modules enables a [dropwizard][dw] application to send
+This modules enables a [dropwizard][dw] application to send
 [metrics][dwm] to an [elasticsearch][e] instance.
 
 ## What about [Metrics Elasticsearch Reporter][mer]? Doesn't it do just that?
