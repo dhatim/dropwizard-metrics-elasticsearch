@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import io.dropwizard.metrics.BaseReporterFactory;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Map;
 import org.elasticsearch.metrics.ElasticsearchReporter;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Range;
@@ -53,6 +54,8 @@ public class ElasticSearchReporterFactory extends BaseReporterFactory {
     
     public String indexDateFormat = "yyyy.MM.dd";
     
+    public Map<String, Object> additionalFields;
+    
     @Override
     public ScheduledReporter build(MetricRegistry registry) {
         try {
@@ -65,6 +68,7 @@ public class ElasticSearchReporterFactory extends BaseReporterFactory {
                     .prefixedWith(prefix)
                     .index(index)
                     .indexDateFormat(indexDateFormat)
+                    .additionalFields(additionalFields)
                     .build();
         } catch (IOException e) {
             throw new RuntimeException("can't build elasticsearch reporter", e);
