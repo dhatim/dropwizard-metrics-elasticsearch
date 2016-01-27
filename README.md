@@ -46,6 +46,7 @@ The configuration is somewhat limited right now:
 - prefix: useful to identify single hosts.
 - index: elasticsearch index name.
 - indexDateFormat: elasticsearch index date format.
+- additionalFields: optional map of additional field values.
 
 ### default values
 
@@ -59,6 +60,7 @@ metrics:
       prefix:
       index: metrics
       indexDateFormat: yyyy.MM.dd
+      additionalFields:
 ```
 
 It should basically follow the [Metrics Elasticsearch Reporter][mer]
