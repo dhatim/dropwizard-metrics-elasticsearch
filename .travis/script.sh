@@ -1,4 +1,4 @@
-#!/usr/bin/env sh -e
+#!/usr/bin/env bash
 
 if [ ${TRAVIS_PULL_REQUEST} == false -a ${TRAVIS_BRANCH} == master -a ! -z ${TRAVIS_TAG} ]; then
     # not a pr, branch is master, this is a tag: deploy
