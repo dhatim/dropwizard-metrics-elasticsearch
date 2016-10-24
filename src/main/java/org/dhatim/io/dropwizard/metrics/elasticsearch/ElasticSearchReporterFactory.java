@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.dhatim.io.dropwizard.metrics.elasticsearch;
+package org.dhatim.io.dropwizard.metrics.elasticsearch;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.ScheduledReporter;

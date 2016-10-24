@@ -19,7 +19,7 @@ fact, under the hood it actually makes use of
 <dependencies>
     ../..
     <dependency>
-        <groupId>com.dhatim.io.dropwizard</groupId>
+        <groupId>org.dhatim.io.dropwizard</groupId>
         <artifactId>dropwizard-metrics-elasticsearch</artifactId>
         <version>1.0.2</version>
     </dependency>
