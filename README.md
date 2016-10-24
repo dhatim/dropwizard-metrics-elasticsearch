@@ -24,7 +24,7 @@ fact, under the hood it actually makes use of
     <dependency>
         <groupId>org.dhatim.io.dropwizard</groupId>
         <artifactId>dropwizard-metrics-elasticsearch</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.8</version>
     </dependency>
     ../..
 </dependencies>
