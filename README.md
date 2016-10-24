@@ -1,5 +1,7 @@
 # Dropwizard Metrics Support for Elastic Search
 
+[![Build Status](https://travis-ci.org/dhatim/dropwizard-metrics-elasticsearch.png?branch=master)](https://travis-ci.org/dhatim/dropwizard-metrics-elasticsearch)
+
 This modules enables a [dropwizard][dw] application to send
 [metrics][dwm] to an [elasticsearch][e] instance.
 
