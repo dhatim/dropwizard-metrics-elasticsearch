@@ -6,7 +6,8 @@
     <artifactId>dropwizard-metrics-elasticsearch</artifactId>
     <version>1.0.8-SNAPSHOT</version>
 
-    <name>Dropwizard Metrics Support for Elastic Search</name>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Dropwizard Metrics Support for Elastic Search</description>
     <url>https://github.com/dhatim/dropwizard-metrics-elasticsearch</url>
 
     <licenses>
@@ -31,7 +32,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git@github.com:dhatim/dropwizard-metrics-elasticsearch.git</connection>
+        <connection>scm:git:git://github.com/dhatim/dropwizard-metrics-elasticsearch.git</connection>
+        <developerConnection>scm:git:ssh://github.com:dhatim/dropwizard-metrics-elasticsearch.git</developerConnection>
+        <url>https://github.com/dhatim/dropwizard-metrics-elasticsearch/tree/${project.version}</url>
     </scm>
 
     <distributionManagement>
