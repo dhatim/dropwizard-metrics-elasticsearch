@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "${TRAVIS_PULL_REQUEST}" -a "${TRAVIS_BRANCH}" == master -a ! -z "${TRAVIS_TAG}" ]; then
+if [ "${TRAVIS_PULL_REQUEST}" == false -a "${TRAVIS_BRANCH}" == master -a ! -z "${TRAVIS_TAG}" ]; then
     # not a pr, branch is master, this is a tag: deploy
     echo ${GPG_SECRET_KEY} | base64 --decode | gpg --import
     echo ${GPG_OWNERTRUST} | base64 --decode | gpg --import-ownertrust
