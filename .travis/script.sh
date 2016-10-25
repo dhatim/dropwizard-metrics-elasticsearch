@@ -13,5 +13,5 @@ then
     mvn -s .travis/settings.xml -P release deploy
 else
     # this is a regular build
-    mvn -o install
+    mvn install
 fi
