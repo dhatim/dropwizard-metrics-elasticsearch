@@ -1,4 +1,5 @@
 language: java
 jdk: oraclejdk8
-install: true
-script: bash -ex .travis/script.sh
+before_install: env
+install: mvn dependency:go-offline
+script: . .travis/script.sh
